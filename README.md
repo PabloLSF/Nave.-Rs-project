@@ -1,8 +1,10 @@
 # Nave.-Rs-project
 
 BACKEND CHALLENGE
+
 O Desafio 
-​Queremos que você desenvolva a API de um produto de controle de candidatos para vagas de empregos. Dentro do produto terão as seguintes funcionalidades:
+
+Queremos que você desenvolva a API de um produto de controle de candidatos para vagas de empregos. Dentro do produto terão as seguintes funcionalidades:
 
 Deve ser possível cadastrar usuários que vão administrar o sistema
 

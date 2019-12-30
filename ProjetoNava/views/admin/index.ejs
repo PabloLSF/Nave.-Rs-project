@@ -1,0 +1,54 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/navbaradmin.ejs'); %>
+<div class="container">
+  <hr>
+  <h2>ARTIGOS</h2>
+  <a class="btn btn-dark" href="/admin/event/new">Criar nova Vaga</a>
+  <hr>
+  <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Titulo</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+<% events.forEach(event=>{%>
+  <tr>
+
+  <th><%=event.id%></th>
+  <th><%=event.title%></th>
+
+
+  <th>
+    <a href="/admin/event/edit/<%=event.id%>" class="btn btn-warning">Editar</a>
+    <form method="POST" action="/admin/delete/event" style="display: inline;" onsubmit="confirmarDelecao(event,this)">
+      <input type="hidden" name="id" value="<%= event.id %>">
+        <button class="btn btn-danger">Deletar</button>
+          <a href="/admin/event/view/<%=event.id%>" class="btn btn-dark">Ver vaga</a>
+    </form>
+  </th>
+  </tr>
+<%})%>
+
+
+
+    </tbody>
+
+  </table>
+  </div>
+
+
+</body>
+<%- include('../partial/footer.ejs'); %>
+<script type="text/javascript">
+
+    function confirmarDelecao(event,form){
+    event.preventDefault();
+    var decision = confirm("Você quer deletar esata artigo?");
+    if(decision){
+      form.submit();
+    }
+  }
+</script>

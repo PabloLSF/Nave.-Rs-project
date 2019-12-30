@@ -1,0 +1,65 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/navbaradmin.ejs'); %>
+
+<div class="container">
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h2>Nome: <%=user.name%></h2>
+      <h3>CPF: <%=user.cpf%></h3>
+      <hr>
+      <h3>Contatos</h3>
+      <hr>
+      <h4><%=user.email%></h4>
+      <h4><%=user.fone%></h4>
+      <br>
+      <h3>Comentarios</h3>
+      <h4><%=user.comment%></h4>
+          <br>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+    <div class="card">
+      <div class="card-body">
+<h1>Lista de vagas cadastradas</h1>
+  <hr>
+  <%events.forEach(event=>{%>
+    <div class="card">
+      <div class="card-header">
+        <h2><%= event.title%></h2>
+      </div>
+      <div class="card-body">
+        <a href="/admin/event/view/<%=event.id%>" class="btn btn-dark">ver vaga</a>
+      </div>
+
+    </div>
+
+  <%})%>
+  <div class="row">
+    <div class="col col-12">
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../partial/footer.ejs'); %>

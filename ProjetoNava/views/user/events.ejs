@@ -1,0 +1,33 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/navbar.ejs'); %>
+
+
+<hr>
+<%events.forEach(event=>{%>
+  <div class="card">
+    <div class="card-header">
+      <h2><%= event.title%></h2>
+    </div>
+
+    <div class="card-body">
+      <a href="/user/<%=user.id%>/event/<%=event.slug%>" class="btn btn-dark">ver vaga</a>
+    </div>
+
+  </div>
+
+
+<%})%>
+<div class="row">
+  <div class="col col-12">
+
+
+
+
+
+
+
+
+
+
+
+  <%- include('../partial/footer.ejs'); %>

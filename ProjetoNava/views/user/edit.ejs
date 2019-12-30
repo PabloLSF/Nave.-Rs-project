@@ -1,0 +1,45 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/navbar.ejs'); %>
+<div class="container">
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h1>Dados atuais</h1>
+      <hr>
+      <h2>Nome: <%=user.name%></h2>
+      <h3>CPF: <%=user.cpf%></h3>
+      <hr>
+      <h3>Contatos</h3>
+      <hr>
+      <h4><%=user.email%></h4>
+      <h4><%=user.fone%></h4>
+      <br>
+    </div>
+    <div class="card-body">
+      <form method="POST" action="/user/<%=user.id%>/update">
+      <input type="hidden" value="<%=user.id%>" name="id">
+
+          <h2>Nome</h2>
+          <input class="form-control" name="nameUser" type="text">
+          <br>
+          <h2>Email</h2>
+          <input class="form-control" name="emailUser" type="email"placeholder="email@.com.br">
+          <br>
+          <h2>Telefone</h2>
+          <input class="form-control" name="foneUser" type="number"placeholder="988855663">
+          <br>
+          <h2>CPF</h2>
+          <input class="form-control" name="cpfUser" type="number"placeholder="000000000000">
+          <br>
+          
+          <button type="submit" class="btn btn-dark btn-block">Atualizar</button>
+
+        </form>
+      </div>
+
+      </div>
+    </div>
+
+
+
+  <%- include('../partial/footer.ejs'); %>

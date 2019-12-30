@@ -1,0 +1,75 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/homenavbar.ejs'); %>
+
+
+
+<div class="container">
+  <hr>
+  <div class="card mt-4">
+    <div class="card-header">
+    <h2>Criação de Administrador</h2>
+
+    </div>
+    <div class="card-body">
+      <form  action="/login/admin/create" method="POST">
+        <h2>Email</h2>
+        <input class="form-control" name="emailAdmin" type="email"placeholder="email@.com.br">
+<br>
+<h2>Senha</h2>
+        <input class="form-control" name="passwordAdmin" type="password" placeholder="******">
+        <br>
+        <button type="submit" class="btn btn-dark btn-block">Criar</button>
+
+      </form>
+    </div>
+
+  </div>
+  <hr>
+  <div class="card mt-4">
+    <div class="card-header">
+    <h2>Criação de Usuario</h2>
+
+    </div>
+    <div class="card-body">
+      <form  action="/login/user/create" method="POST">
+        <h2>Nome</h2>
+        <input class="form-control" name="nameUser" type="text">
+        <br>
+        <h2>Email</h2>
+        <input class="form-control" name="emailUser" type="email"placeholder="email@.com.br">
+        <br>
+        <h2>Telefone</h2>
+        <input class="form-control" name="foneUser" type="number"placeholder="988855663">
+        <br>
+        <h2>CPF</h2>
+        <input class="form-control" name="cpfUser" type="number"placeholder="000000000000">
+        <br>
+        <h2>Senha</h2>
+        <input class="form-control" name="passwordUser" type="password" placeholder="******">
+        <br>
+        <button type="submit" class="btn btn-dark btn-block">Criar</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../partial/footer.ejs'); %>

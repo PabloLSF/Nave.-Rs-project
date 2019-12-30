@@ -1,0 +1,52 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/navbaradmin.ejs'); %>
+<div class="container">
+  <hr>
+  <h2>Lista de Candidatos</h2>
+
+  <hr>
+  <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>email</th>
+        <th>cpf</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+<% users.forEach(user=>{%>
+  <tr>
+
+  <th><%=user.id%></th>
+  <th><%=user.name%></th>
+  <th><%=user.fone%></th>
+  <th><%=user.email%></th>
+  <th><%=user.cpf%></th>
+  <th>
+    <a href="/admin/edit/user/<%=user.id%>" class="btn btn-warning">Editar</a>
+    <a href="/admin/view/user/<%=user.id%>" class="btn btn-dark">Ver candidato</a>
+
+  </th>
+  </tr>
+<%})%>
+
+
+
+    </tbody>
+
+  </table>
+  </div>
+<%- include('../partial/footer.ejs'); %>
+<script type="text/javascript">
+
+    function confirmarDelecao(event,form){
+    event.preventDefault();
+    var decision = confirm("Você quer deletar esata artigo?");
+    if(decision){
+      form.submit();
+    }
+  }
+</script>

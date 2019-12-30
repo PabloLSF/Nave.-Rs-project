@@ -1,0 +1,43 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/navbaradmin.ejs'); %>
+<div class="container">
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h2>Nome: <%=user.name%></h2>
+      <h3>CPF: <%=user.cpf%></h3>
+      <hr>
+      <h3>Contatos</h3>
+      <hr>
+      <h4><%=user.email%></h4>
+      <h4><%=user.fone%></h4>
+      <br>
+    </div>
+    <div class="card-body">
+      <form method="POST" action="/admin/user/update">
+      <input type="hidden" value="<%=user.id%>" name="id">
+       <h3>Adicione um comentario</h3>
+        <textarea class="form-control"  name="comment" placeholder="adicione um comentario"><%-user.comment%></textarea>
+        <br>
+
+          <br>
+          <button class="btn btn-dark">Atualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partial/footer.ejs'); %>
+
+  <script src="/tinymce/tinymce.min.js">
+  </script>
+
+  <script>
+    tinymce.init({
+      language:'pt_BR',
+      selector:"#event",
+      plugins: [
+      'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons'
+      ]
+    })
+  </script>

@@ -1,0 +1,21 @@
+Passo 1;
+npm init
+npm install --save express
+npm install --save sequelize
+npm install --save mysql2
+npm install --save body-parser
+npm install --save ejs
+Passo 2
+Cria o banco de dados
+baixar o bootstrap
+https://getbootstrap.com/
+
+ferramenta para trasformar titulo em rota
+Slug
+npm install --save slugify
+Hash
+npm install --save bcryptjs
+
+lidar com sessoes
+npm install express-session --save
+ 

@@ -1,0 +1,22 @@
+<%- include('../partial/header.ejs'); %>
+<%- include('../partial/navbar.ejs'); %>
+<div class="container">
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h2><%=events.title%></h2>
+      <hr>
+      <br>
+      <h3><%-events.body%></h3>
+      <hr>
+          <br>
+          <form method="POST" action="/user/singup/">
+          <input type="hidden" value="<%=user.id%>" name="idU">
+          <input type="hidden" value="<%=events.id%>" name="idE">
+          <button type="submit" class="btn btn-dark btn-block">cadastrar</button>
+
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partial/footer.ejs'); %>

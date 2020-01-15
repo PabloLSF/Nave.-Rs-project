@@ -1,39 +1,56 @@
-# Nave.-Rs-project
+# Node API BACKEND CHALLENGE by Pablo Sanches
 
-BACKEND CHALLENGE
+BACKEND CHALLENGE is an API for a job tracking candidate control product.
 
-O Desafio 
+Within the product will have the following features:
 
-Queremos que você desenvolva a API de um produto de controle de candidatos para vagas de empregos. Dentro do produto terão as seguintes funcionalidades:
+It is possible to register users who will administer the system
 
-Deve ser possível cadastrar usuários que vão administrar o sistema
+System administrators can create job openings
 
-Usuários que administram o sistema podem criar vagas de emprego
+Candidates can register (applicants have a name, email, phone and cpf).
 
-Candidatos podem se cadastrar (candidatos tem um nome, email, telefone e cpf).
+Candidates can apply for one or more job openings (as an application, imagine that a full-stack developer could apply for both front-end and back-end jobs).
 
-Candidatos podem se cadastrar a uma, ou mais, vagas de emprego (como uma candidatura, imagine que um desenvolvedor full-stack poderia se candidatar tanto a vagas de front-end quanto back-end).
+Users administering the system can add comments related to each application (relationship between a vacancy and a candidate, so that the interviewer can comment on what they think of the candidate and the stages he or she has already advanced in the test).
 
-Usuários que administram o sistema podem adicionar comentários relacionados a cada candidatura (relação entre uma vaga e um candidato, para que o entrevistador possa fazer comentários sobre o que achou do candidato e as fases que ele já avançou no teste)​
+# Getting started
 
-O que esperamos? 
-Você pode utilizar qualquer framework/lib js que você se sinta mais confortável para desenvolver o teste.
+## Installation
 
-Você pode utilizar qualquer biblioteca para acelerar o desenvolvimento. Apenas cuidado para não prejudicar a performance.
+1. Install [Node.JS](https://nodejs.org/en/download/package-manager/) latest version
+2. Install MySql
+2. Clone this repository
+3. Install dependencies, just run in project folder: `npm install`
 
-Algo que acreditamos ser muito importante é o feedback pro usuário a cada ação que ele executa, é importante que se mantenha um padrão consistente para mensagens de erros, para o usuário entender o houve de errado na utilização da API​
 
-Premissas 
-Utilizar banco de dados relacional
+## Things to do before run the project:
 
-Utilizar ultima versão LTS do Node.js
+1. Create database (by follow the commands):
+  - CREATE USER `root` WITH PASSWORD `starcraft`
+  - CREATE DATABASE `navdatabase` 
+ 
 
-Documentação dos endpoints da API​
 
-Diferenciais 
-Utilizar testes
-Observações 
-​Sinta-se livre para criar os campos de cada entidade da forma que considerar adequado. Apenas pedimos para que sejam criados os campos suficientes para testar a API com uma situação real.​
 
-Entrega 
-​A entrega deve ser feita através de um repositório público no Git na plataforma de sua preferência. Ao terminar mande o link do repositório do projeto para felipe@nave.rs, joaopedro@nave.rs e miguel.scherdien@nave.rs.
+
+## Directory Structure
+
+```
+├── /BACKEND-CHALLENGE
+|   ├── /controllers
+|   |    ├── /admin
+|   |    ├── /events
+|   |    ├── /user
+|   ├── /database
+|   ├── /middleware
+|   ├── /node_modules
+|   ├── /public
+|   ├── /views
+|   |    ├── /admin
+|   |    ├── /login
+|   |    ├── /partil
+|   |    ├── /user
+
+```
+

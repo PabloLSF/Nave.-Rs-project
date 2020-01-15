@@ -1,4 +1,3 @@
-//sistema de segurança da API
 function adminAuth(req, res, next){
   if(req.session.user != undefined){
     next();

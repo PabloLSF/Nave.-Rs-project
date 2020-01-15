@@ -17,31 +17,31 @@
     </div>
     <div class="card-body">
       <form method="POST" action="/user/<%=user.id%>/update">
-      <input type="hidden" value="<%=user.id%>" name="id">
+        <input type="hidden" value="<%=user.id%>" name="id">
 
-          <h2>Nome</h2>
-          <input class="form-control" name="nameUser" type="text">
-          <br>
-          <h2>Email</h2>
-          <input class="form-control" name="emailUser" type="email"placeholder="email@.com.br">
-          <br>
-          <h2>Telefone</h2>
-          <input class="form-control" name="foneUser" type="number"placeholder="988855663">
-          <br>
-          <h2>CPF</h2>
-          <input class="form-control" name="cpfUser" type="number"placeholder="000000000000">
-          <br>
-          <h2>Senha</h2>
-          <input class="form-control" name="passwordUser" type="password" placeholder="******">
-          <br>
-          <button type="submit" class="btn btn-dark btn-block">Atualizar</button>
-
-        </form>
-      </div>
-
-      </div>
+        <h2>Nome</h2>
+        <input class="form-control" name="nameUser" type="text">
+        <br>
+        <h2>Email</h2>
+        <input class="form-control" name="emailUser" type="email"placeholder="email@.com.br">
+        <br>
+        <h2>Telefone</h2>
+        <input class="form-control" name="foneUser" type="number"placeholder="988855663">
+        <br>
+        <h2>CPF</h2>
+        <input class="form-control" name="cpfUser" type="number"placeholder="000000000000">
+        <br>
+        <h2>Senha</h2>
+        <input class="form-control" name="passwordUser" type="password" placeholder="******">
+        <br>
+        <button type="submit" class="btn btn-dark btn-block">Atualizar</button>
+        
+      </form>
     </div>
 
+  </div>
+</div>
 
 
-  <%- include('../partial/footer.ejs'); %>
+
+<%- include('../partial/footer.ejs'); %>

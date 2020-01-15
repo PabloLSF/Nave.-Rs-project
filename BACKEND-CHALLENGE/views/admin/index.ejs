@@ -2,8 +2,8 @@
 <%- include('../partial/navbaradmin.ejs'); %>
 <div class="container">
   <hr>
-  <h2>ARTIGOS</h2>
-  <a class="btn btn-dark" href="/admin/event/new">Criar nova Vaga</a>
+  <h2>Vagas em aberto</h2>
+  <a class="btn btn-dark" href="/admin/event/new">Criar nova vaga </a>
   <hr>
   <table class="table table-bordered" >
     <thead>
@@ -14,29 +14,29 @@
       </tr>
     </thead>
     <tbody>
-<% events.forEach(event=>{%>
-  <tr>
+      <% events.forEach(event=>{%>
+        <tr>
 
-  <th><%=event.id%></th>
-  <th><%=event.title%></th>
-
-
-  <th>
-    <a href="/admin/event/edit/<%=event.id%>" class="btn btn-warning">Editar</a>
-    <form method="POST" action="/admin/delete/event" style="display: inline;" onsubmit="confirmarDelecao(event,this)">
-      <input type="hidden" name="id" value="<%= event.id %>">
-        <button class="btn btn-danger">Deletar</button>
-          <a href="/admin/event/view/<%=event.id%>" class="btn btn-dark">Ver vaga</a>
-    </form>
-  </th>
-  </tr>
-<%})%>
+          <th><%=event.id%></th>
+          <th><%=event.title%></th>
 
 
+          <th>
+            <a href="/admin/event/edit/<%=event.id%>" class="btn btn-warning">Editar</a>
+            <form method="POST" action="/admin/delete/event" style="display: inline;" onsubmit="confirmarDelecao(event,this)">
+              <input type="hidden" name="id" value="<%= event.id %>">
+              <button class="btn btn-danger">Deletar</button>
+              <a href="/admin/event/view/<%=event.id%>" class="btn btn-dark">Ver vaga</a>
+            </form>
+          </th>
+        </tr>
+        <%})%>
 
-    </tbody>
 
-  </table>
+
+      </tbody>
+
+    </table>
   </div>
 
 
@@ -44,7 +44,7 @@
 <%- include('../partial/footer.ejs'); %>
 <script type="text/javascript">
 
-    function confirmarDelecao(event,form){
+  function confirmarDelecao(event,form){
     event.preventDefault();
     var decision = confirm("Você quer deletar esata artigo?");
     if(decision){

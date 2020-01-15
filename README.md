@@ -21,7 +21,7 @@ Users administering the system can add comments related to each application (rel
 1. Install [Node.JS](https://nodejs.org/en/download/package-manager/) latest version
 2. Install MySql
 2. Clone this repository
-3. Install dependencies, just run in project folder: `npm install`
+
 
 
 ## Things to do before run the project:

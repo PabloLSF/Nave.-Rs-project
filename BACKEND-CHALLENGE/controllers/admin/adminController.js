@@ -9,31 +9,31 @@ const adminAuth= require("../../middlewares/adminAuth")
 
 
 router.post("/login/admin/create",(req,res)=>{
-var email=req.body.emailAdmin;
-var password =req.body.passwordAdmin;
+  var email=req.body.emailAdmin;
+  var password =req.body.passwordAdmin;
 
-Admin.findOne({where:{email:email}}).then(admin=>{
-  if(admin==undefined){
-    var salt =bcrypt.genSaltSync(10);//seed
-    var hash =bcrypt.hashSync(password,salt);//gerando o hash
-    Admin.create({
-      email:email,
-      password:hash
-    }).then(()=>{
-      res.redirect("/");
-    }).catch((err)=>{
+  Admin.findOne({where:{email:email}}).then(admin=>{
+    if(admin==undefined){
+      var salt =bcrypt.genSaltSync(10);
+      var hash =bcrypt.hashSync(password,salt);
+      Admin.create({
+        email:email,
+        password:hash
+      }).then(()=>{
         res.redirect("/");
-    });
-  }else{
-    res.redirect("/");
-  }
-})
+      }).catch((err)=>{
+        res.redirect(err);
+      });
+    }else{
+      res.redirect("/");
+    }
+  })
 });
 
 router.get("/admin/user",adminAuth,(req,res)=>{
   User.findAll().then(users=>{
-  res.render("admin/listUser",{users:users});
-})
+    res.render("admin/listUser",{users:users});
+  })
 })
 
 
@@ -43,8 +43,8 @@ router.get("/admin/logout",adminAuth,(req,res)=>{
 })
 router.get("/admin",adminAuth,(req,res)=>{
   Event.findAll().then(events=>{
-  res.render("admin/index",{events:events});
-})
+    res.render("admin/index",{events:events});
+  })
 });
 router.get("/admin/event/new",adminAuth,(req,res)=>{
   res.render("admin/newEvent")
@@ -76,7 +76,7 @@ router.get("/admin/event/edit/:id",adminAuth,(req, res)=>{
       res.redirect("/admin");
     }
   }).catch(err=>{
-    res.redirect("/admin");
+    res.redirect(err);
   })
 });
 
@@ -92,7 +92,7 @@ router.post("/admin/event/update",(req, res)=>{
   }).then(()=>{
     res.redirect("/admin/");
   }).catch(err=>{
-    res.redirect("/");
+    res.redirect(err);
   });
 });
 
@@ -122,13 +122,13 @@ router.get("/admin/edit/user/:id",adminAuth,(req, res)=>{
   User.findByPk(id).then(user=>{
     if(user != undefined){
 
-        res.render("admin/editUser",{user:user})
+      res.render("admin/editUser",{user:user})
 
     }else{
       res.redirect("/admin/user");
     }
   }).catch(err=>{
-    res.redirect("/admin/user");
+    res.redirect(err);
   })
 });
 
@@ -150,23 +150,21 @@ router.post("/admin/user/update",(req, res)=>{
 
 router.get("/admin/event/view/:id",adminAuth,(req,res)=>{
   var id=req.params.id;
-    Event.findByPk(id).then(event=>{
+  Event.findByPk(id).then(event=>{
 
-        res.render("admin/eventView",{event:event})
+    res.render("admin/eventView",{event:event})
 
-});
+  });
 })
 
 router.get("/admin/view/user/:id",adminAuth,(req,res)=>{
   var id=req.params.id;
   User.findByPk(id).then(user=>{
-  Event.findAll({where:{userId:id}}).then(events=>{
-        res.render("admin/useView",{user:user,events:events})
+    Event.findAll({where:{userId:id}}).then(events=>{
+      res.render("admin/useView",{user:user,events:events})
 
+    });
+  });
 });
-});
-});
-
-
 
 module.exports = router;

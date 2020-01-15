@@ -15,8 +15,7 @@ const Event= connection.define('events',{
     allowNull: false
   }
 })
-// tem muitos
-User.hasMany(Event);// tem muitos
-Event.belongsTo(User);//um
+User.hasMany(Event);
+Event.belongsTo(User);
 Event.sync({force: false});
 module.exports= Event;

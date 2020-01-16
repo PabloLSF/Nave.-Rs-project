@@ -34,7 +34,7 @@ Users administering the system can add comments related to each application (rel
 
 ## Testing
 1. Run index.js in /BACKEND-CHALLENGE/index.js
-2. Open Browser in 'http://localhost:8080/'
+2. Open Browser in `http://localhost:8080/`
 
 
 ## Directory Structure

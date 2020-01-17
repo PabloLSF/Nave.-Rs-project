@@ -4,24 +4,31 @@ BACKEND CHALLENGE is an API for a job tracking candidate tracking product.
 
 Within the product there will be the following features:
 
-# Register Administrators.
+## Register Administrators.
  
-Administrators can:
+### Administrators can:
 
 1- Create new job offer.
+
 2- Edit existing job offer.
+
 3-Delete current job offer.
+
 4-View data of candidates and which job offers are registered.
+
 5- Add comment on a specific user
  
 
-# Register candidates.
+## Register candidates.
 
-Candidates can:
+### Candidates can:
 
 1-Edit your registration data.
-2-View open job offers
+
+2-View open job offers.
+
 3-Register for one or more jobs.
+
 4-View the job offers that have registered.
 
 # Getting started

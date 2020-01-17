@@ -1,18 +1,28 @@
 # Node API BACKEND CHALLENGE by Pablo Sanches
 
-BACKEND CHALLENGE is an API for a job tracking candidate control product.
+BACKEND CHALLENGE is an API for a job tracking candidate tracking product.
 
-Within the product will have the following features:
+Within the product there will be the following features:
 
-It is possible to register users who will administer the system
+# Register Administrators.
+ 
+Administrators can:
 
-System administrators can create job openings
+1- Create new job offer.
+2- Edit existing job offer.
+3-Delete current job offer.
+4-View data of candidates and which job offers are registered.
+5- Add comment on a specific user
+ 
 
-Candidates can register (applicants have a name, email, phone and cpf).
+# Register candidates.
 
-Candidates can apply for one or more job openings (as an application, imagine that a full-stack developer could apply for both front-end and back-end jobs).
+Candidates can:
 
-Users administering the system can add comments related to each application (relationship between a vacancy and a candidate, so that the interviewer can comment on what they think of the candidate and the stages he or she has already advanced in the test).
+1-Edit your registration data.
+2-View open job offers
+3-Register for one or more jobs.
+4-View the job offers that have registered.
 
 # Getting started
 

@@ -6,7 +6,7 @@ Within the product there will be the following features:
 
 ## Register Administrators.
  
-### Administrators can:
+### Administrators will be able to:
 
 1- Create new job offer.
 
@@ -21,7 +21,7 @@ Within the product there will be the following features:
 
 ## Register candidates.
 
-### Candidates can:
+### Candidates will be able to:
 
 1-Edit your registration data.
 
@@ -29,7 +29,7 @@ Within the product there will be the following features:
 
 3-Register for one or more jobs.
 
-4-View the job offers that have registered.
+4-View the job offers that they have registered for.
 
 # Getting started
 
@@ -51,8 +51,14 @@ Within the product there will be the following features:
 
 ## Testing
 1. Run index.js in /BACKEND-CHALLENGE/index.js
-2. Open Browser in `http://localhost:8080/`
-
+2. Open browser in `http://localhost:8080/`
+3. Create a new admin and a new user on `sign in` area.
+4. `Log in` as admin.
+5. Create a new job offer.
+6. `Log out`. 
+7. `Log in` as user.
+8.  Search for  the job offer previously created as admin.
+ 
 
 ## Directory Structure
 

@@ -41,7 +41,7 @@ app.get("/",(req, res)=>{
   res.render("index")
 
 });
-app.get("/singin",(req, res)=>{
+app.get("/signin",(req, res)=>{
   res.render("login/create")
 
 });

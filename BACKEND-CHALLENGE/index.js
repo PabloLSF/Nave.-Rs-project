@@ -66,7 +66,7 @@ app.post("/authenticate",(req,res)=>{
           res.redirect("/user/"+user.id+"/perfil");
         });
       }else{
-        res.redirect("/login");
+        res.redirect("/signin");
       }
     }else{
       Admin.findOne({where:{email: email}}).then(user=>{
@@ -81,11 +81,11 @@ app.post("/authenticate",(req,res)=>{
             res.redirect("/admin");
 
           }else{
-            res.redirect("/login");
+            res.redirect("/signin");
           }
         }else{
 
-          res.redirect("/login");
+          res.redirect("/signin");
         }
       })
     }

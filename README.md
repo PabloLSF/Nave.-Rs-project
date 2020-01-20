@@ -52,11 +52,11 @@ Within the product there will be the following features:
 ## Testing
 1. Run index.js in /BACKEND-CHALLENGE/index.js
 2. Open browser in `http://localhost:8080/`
-3. Create a new admin and a new user on `sign in` area.
-4. `Log in` as admin.
+3. Create a new admin and a new user on `Sign Up` area.
+4. `Log In` as admin.
 5. Create a new job offer.
-6. `Log out`. 
-7. `Log in` as user.
+6. `Log Out`. 
+7. `Log In` as user.
 8.  Search for  the job offer previously created as admin.
  
 
